@@ -9,7 +9,7 @@ function NewReminder({ onAddReminder }: NewReminderProps) {
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    //if (!title) return;
+    if (!title) return;
     onAddReminder(title);
     setTitle("");
   };
