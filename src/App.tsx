@@ -3,6 +3,7 @@ import Reminder from "./models/reminder";
 import ReminderList from "./components/ReminderList";
 import reminderService from "./services/reminder";
 import { useEffect, useState } from "react";
+import NewReminder from "./components/NewReminder";
 
 function App() {
   const [reminders, setReminders] = useState<Reminder[]>([]);
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <NewReminder />
       <ReminderList items={reminders} onRemoveReminder={removeReminder} />
     </div>
   );
